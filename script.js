@@ -47,3 +47,18 @@ yesBtn.addEventListener("click",()=>{
   answerMessage.textContent="Thank you soooooooooo much! I really love you!!! ♡";
   yesBtn.style.transform="scale(1.18)";
 });
+
+const letterPop=document.getElementById("letterPop");
+const letterPopTitle=document.getElementById("letterPopTitle");
+const letterPopMessage=document.getElementById("letterPopMessage");
+const letterPopClose=document.getElementById("letterPopClose");
+document.querySelectorAll(".envelope").forEach(envelope=>{
+  envelope.addEventListener("click",()=>{
+    letterPopTitle.textContent=envelope.dataset.title;
+    letterPopMessage.textContent=envelope.dataset.message;
+    letterPop.classList.add("open");
+    letterPop.setAttribute("aria-hidden","false");
+  });
+});
+letterPopClose.addEventListener("click",()=>{letterPop.classList.remove("open");letterPop.setAttribute("aria-hidden","true");});
+letterPop.addEventListener("click",e=>{if(e.target===letterPop) letterPopClose.click();});
