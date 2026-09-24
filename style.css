@@ -317,3 +317,54 @@ button span{margin-left:7px}.foreground-paper{position:absolute;z-index:11;botto
   .paper-person.girl{right:25% !important}
   .universe-note{font-size:17px !important;bottom:35px !important}
 }
+
+/* Universe title collision fix */
+.universe-title{
+  z-index:20 !important;
+  width:min(900px,82%) !important;
+  top:72px !important;
+}
+.universe-title h2{
+  position:relative !important;
+  z-index:21 !important;
+  max-width:900px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  line-height:1.02 !important;
+  text-wrap:balance !important;
+}
+.constellation-line{
+  z-index:3 !important;
+  opacity:.7 !important;
+}
+.line-a{
+  left:22% !important;
+  top:42% !important;
+  width:135px !important;
+  transform:rotate(-20deg) !important;
+}
+.line-b{
+  left:48% !important;
+  top:38% !important;
+  width:145px !important;
+  transform:rotate(25deg) !important;
+}
+.line-c{
+  left:60% !important;
+  top:48% !important;
+  width:125px !important;
+  transform:rotate(15deg) !important;
+}
+@media(max-width:650px){
+  .universe-title{
+    top:48px !important;
+    width:88% !important;
+  }
+  .universe-title h2{
+    font-size:37px !important;
+    line-height:1.03 !important;
+  }
+  .line-a{left:16% !important;top:42% !important;width:100px !important}
+  .line-b{left:47% !important;top:39% !important;width:105px !important}
+  .line-c{left:60% !important;top:48% !important;width:90px !important}
+}
