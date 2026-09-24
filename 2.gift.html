@@ -45,11 +45,32 @@ h1{text-align:center;font:600 clamp(46px,8vw,72px)/.9 "Cormorant Garamond",serif
   .letter-body{font-size:18px;line-height:1.8}
   .closing{font-size:19px!important}.signature{font-size:28px!important}
 }
+
+/* scrapbook details */
+.scrap{position:absolute;z-index:4;pointer-events:none}
+.washi{width:92px;height:26px;background:rgba(224,198,150,.82);box-shadow:0 1px 4px rgba(60,45,35,.12)}
+.washi.a{top:42px;left:24px;transform:rotate(-9deg)}
+.washi.b{top:86px;right:28px;background:rgba(190,211,218,.8);transform:rotate(8deg)}
+.clip{width:25px;height:82px;border:3px solid #89939b;border-radius:14px;right:-9px;top:145px;transform:rotate(12deg);box-shadow:1px 2px 2px rgba(40,40,40,.15)}
+.note{background:#f5e7ad;padding:10px 13px;width:125px;font:14px/1.15 "Cormorant Garamond",serif;color:#62533b;box-shadow:3px 5px 0 rgba(67,79,92,.1);transform:rotate(5deg)}
+.note.a{left:-28px;top:270px}.note.b{right:-25px;bottom:230px;background:#dcebd7;transform:rotate(-6deg)}
+.flower{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle,#b97943 0 12%,#d88a9e 13% 30%,#c66f88 31% 48%,#e0a0ad 49% 65%,transparent 66%);filter:drop-shadow(2px 3px 2px rgba(40,30,30,.12))}
+.flower.a{left:12px;bottom:145px;transform:rotate(-12deg)}.flower.b{right:12px;top:320px;transform:rotate(18deg)}
+.paper-star{font-size:22px;color:#7d8fa2}.paper-star.a{left:45px;bottom:120px}.paper-star.b{right:42px;bottom:85px}
+@media(max-width:700px){
+  .washi.a{left:8px}.washi.b{right:8px}.note.a{left:-12px}.note.b{right:-12px}.clip{right:-5px}.flower.a{left:2px}.flower.b{right:2px}
+}
 </style>
 </head>
 <body>
   <main class="garden">
     <article class="letter">
+      <div class="scrap washi a"></div><div class="scrap washi b"></div>
+      <div class="scrap clip"></div>
+      <div class="scrap note a">you make ordinary days feel a little more special ♡</div>
+      <div class="scrap note b">made with a little extra care</div>
+      <div class="scrap flower a"></div><div class="scrap flower b"></div>
+      <div class="scrap paper-star a">✦</div><div class="scrap paper-star b">✦</div>
       <div class="tape"></div>
       <p class="eyebrow">Gift 02 · A little letter from Shlok</p>
       <h1>Dear Deepika ♡</h1>
