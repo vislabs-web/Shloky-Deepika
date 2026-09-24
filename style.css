@@ -368,3 +368,255 @@ button span{margin-left:7px}.foreground-paper{position:absolute;z-index:11;botto
   .line-b{left:47% !important;top:39% !important;width:105px !important}
   .line-c{left:60% !important;top:48% !important;width:90px !important}
 }
+
+/* PHONE-FIRST POLISH — compact, intentional mobile composition */
+@media (max-width:650px){
+  html,body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden !important;
+  }
+  body{background:#bfd5bd}
+  .scene{
+    width:100%;
+    min-height:100vh;
+    padding:14px 10px 48px !important;
+    overflow:hidden !important;
+    background:linear-gradient(#dcecff 0 520px,#bfd5bd 520px 100%) !important;
+  }
+
+  /* Welcome diorama */
+  .diorama{
+    width:100% !important;
+    height:520px !important;
+    min-height:520px !important;
+    margin:0 auto 54px !important;
+    transform:none !important;
+  }
+  .back-paper{border-radius:18px 18px 10px 10px}
+  .sun{width:58px;height:58px;top:10%;left:12%}
+  .paper-cloud{width:105px;height:32px}
+  .cloud-one{top:13%;right:7%;transform:scale(.65)}
+  .cloud-two{top:28%;left:2%;transform:scale(.42)}
+  .mountain{
+    border-left-width:145px !important;
+    border-right-width:145px !important;
+    border-bottom-width:190px !important;
+    bottom:30% !important;
+  }
+  .mountain-left{left:-145px !important}
+  .mountain-right{right:-145px !important}
+  .ground{height:40% !important}
+  .tree{transform:scale(.58) !important;transform-origin:bottom center}
+  .tree-one{left:-8% !important}
+  .tree-two{right:-8% !important}
+  .tree-three{right:12% !important;bottom:26% !important;transform:scale(.38) !important}
+  .letter-card{
+    width:88% !important;
+    min-height:315px !important;
+    padding:48px 18px 30px !important;
+    top:48% !important;
+    transform:translate(-50%,-50%) rotate(-1deg) !important;
+  }
+  .letter-card .eyebrow{
+    font-size:9px !important;
+    margin-bottom:14px !important;
+  }
+  .letter-card h1{font-size:46px !important;line-height:.88 !important}
+  .letter-card .line{margin:20px auto 12px}
+  .letter-card .from{font-size:17px !important;margin-bottom:20px !important}
+  .letter-card button{font-size:11px !important;padding:11px 14px !important}
+  .foreground-paper{height:21px}
+
+  /* Every paper section gets real phone margins */
+  .question-section,
+  .recreate-section,
+  .gifts-section,
+  .open-when-section,
+  .universe-section{
+    width:calc(100% - 4px) !important;
+    max-width:none !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  .question-section,.recreate-section,.gifts-section{margin-bottom:48px !important}
+
+  .question-paper{
+    width:100% !important;
+    padding:42px 18px 36px !important;
+    border-radius:3px !important;
+  }
+  .question-paper h2{font-size:43px !important}
+  .question-note{font-size:16px !important;margin-bottom:24px !important}
+  .answer-area{
+    min-height:125px !important;
+    flex-direction:column !important;
+    gap:13px !important;
+  }
+  .answer{
+    width:135px !important;
+    min-height:45px !important;
+  }
+
+  /* Photo section */
+  .recreate-paper{
+    width:100% !important;
+    padding:42px 13px 34px !important;
+    border-radius:3px !important;
+  }
+  .recreate-paper h2{
+    font-size:32px !important;
+    line-height:1.02 !important;
+    margin-bottom:22px !important;
+  }
+  .photo-frame{
+    width:100% !important;
+    padding:6px !important;
+    margin-top:18px !important;
+    transform:rotate(-.45deg) !important;
+  }
+  .photo-frame img{
+    width:100% !important;
+    aspect-ratio:4/3 !important;
+    object-fit:cover !important;
+  }
+  .recreate-caption{font-size:17px !important;margin-top:18px !important}
+
+  /* Gifts */
+  .gifts-paper{
+    width:100% !important;
+    padding:42px 14px 38px !important;
+    border-radius:3px !important;
+  }
+  .gifts-paper h2{font-size:43px !important}
+  .gifts-subtitle{font-size:16px !important;line-height:1.35 !important}
+  .gift-grid{width:100% !important;gap:16px !important}
+  .gift-card{
+    min-height:170px !important;
+    padding:22px 16px !important;
+  }
+  .gift-icon{font-size:42px !important}
+  .gift-card strong{font-size:25px !important}
+
+  /* Open When */
+  .open-when-section{margin-bottom:52px !important}
+  .open-when-paper{
+    width:100% !important;
+    min-height:0 !important;
+    padding:42px 13px 38px !important;
+    border-radius:3px !important;
+    transform:none !important;
+  }
+  .open-when-paper h2{font-size:46px !important;line-height:.95 !important}
+  .open-when-subtitle{
+    font-size:16px !important;
+    line-height:1.35 !important;
+    max-width:290px !important;
+    margin-bottom:28px !important;
+  }
+  .envelope-wall{
+    width:100% !important;
+    max-width:340px !important;
+    gap:18px !important;
+  }
+  .envelope,.envelope-center{
+    width:100% !important;
+    min-height:142px !important;
+    padding:20px 15px !important;
+  }
+  .envelope-label{font-size:20px !important}
+  .envelope-flap{height:76px !important}
+
+  /* Little Universe — designed around a phone viewport */
+  .universe-section{
+    width:100% !important;
+    margin-bottom:50px !important;
+  }
+  .universe-sky{
+    width:100% !important;
+    height:560px !important;
+    border-radius:4px !important;
+  }
+  .universe-title{
+    top:40px !important;
+    width:88% !important;
+  }
+  .universe-title p{
+    font-size:9px !important;
+    letter-spacing:.20em !important;
+    margin-bottom:11px !important;
+  }
+  .universe-title h2{
+    font-size:34px !important;
+    line-height:1.02 !important;
+    max-width:300px !important;
+  }
+  .moon-paper{
+    width:64px !important;
+    height:64px !important;
+    top:32px !important;
+    right:5% !important;
+  }
+  .moon-paper:after{
+    width:54px !important;
+    height:64px !important;
+    left:-14px !important;
+  }
+  .star{width:4px !important;height:4px !important}
+  .s1{left:9% !important;top:24% !important}
+  .s2{left:18% !important;top:37% !important}
+  .s3{left:34% !important;top:28% !important}
+  .s4{left:48% !important;top:39% !important}
+  .s5{right:25% !important;top:27% !important}
+  .s6{right:12% !important;top:43% !important}
+  .s7{left:14% !important;top:61% !important}
+  .s8{right:10% !important;top:67% !important}
+  .constellation-line{opacity:.42 !important}
+  .line-a{left:18% !important;top:37% !important;width:75px !important;transform:rotate(-22deg) !important}
+  .line-b{left:34% !important;top:28% !important;width:78px !important;transform:rotate(30deg) !important}
+  .line-c{left:48% !important;top:39% !important;width:75px !important;transform:rotate(17deg) !important}
+  .paper-person{
+    width:53px !important;
+    height:122px !important;
+    bottom:90px !important;
+  }
+  .paper-person:after{inset:9px !important}
+  .paper-person span{
+    width:28px !important;
+    height:28px !important;
+    top:-18px !important;
+    left:13px !important;
+  }
+  .paper-person.boy{left:27% !important;transform:rotate(-4deg) !important}
+  .paper-person.girl{right:27% !important;transform:rotate(4deg) !important}
+  .heart-constellation{
+    bottom:185px !important;
+    font-size:43px !important;
+  }
+  .universe-note{
+    width:90% !important;
+    text-align:center !important;
+    white-space:normal !important;
+    font-size:17px !important;
+    line-height:1.2 !important;
+    bottom:30px !important;
+  }
+
+  .hint{
+    position:static !important;
+    width:90% !important;
+    margin:0 auto !important;
+    font-size:9px !important;
+    text-align:center !important;
+  }
+
+  /* Modals fit narrow screens */
+  .modal,.letter-pop{padding:16px !important}
+  .modal-paper,.letter-pop-card{
+    width:100% !important;
+    max-width:370px !important;
+    padding:46px 22px 35px !important;
+  }
+  .modal-paper h2,.letter-pop-card h3{font-size:34px !important}
+  .letter-pop-card p{font-size:17px !important;line-height:1.6 !important}
+}
