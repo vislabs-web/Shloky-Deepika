@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#dbe9ff" />
+  <title>Welcome Dear Deepika</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="scene" aria-label="A paper diorama welcome page">
+    <div class="paper-cloud cloud-one"></div>
+    <div class="paper-cloud cloud-two"></div>
+
+    <div class="sun"></div>
+
+    <section class="diorama">
+      <div class="back-paper"></div>
+
+      <div class="mountain mountain-left"></div>
+      <div class="mountain mountain-right"></div>
+
+      <div class="tree tree-one"><i></i><i></i><i></i></div>
+      <div class="tree tree-two"><i></i><i></i><i></i></div>
+      <div class="tree tree-three"><i></i><i></i><i></i></div>
+
+      <div class="ground">
+        <div class="paper-path"></div>
+        <div class="flower flower-a"></div>
+        <div class="flower flower-b"></div>
+        <div class="flower flower-c"></div>
+      </div>
+
+      <div class="letter-card">
+        <div class="tape"></div>
+        <p class="eyebrow">A little paper world, made for you</p>
+        <h1>Welcome<br><span>Dear Deepika</span></h1>
+        <div class="line"></div>
+        <p class="from">~ by Shlok</p>
+        <button id="openBtn" type="button">Open the little surprise <span>↗</span></button>
+      </div>
+
+      <div class="foreground-paper"></div>
+    </section>
+
+    <p class="hint">Tap the button — the paper world has a secret.</p>
+  </main>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-paper">
+      <button class="close" id="closeBtn" aria-label="Close">×</button>
+      <span class="stamp">FOR DEEPIKA</span>
+      <h2>A small corner of the internet,<br>just for you.</h2>
+      <p>This is only the beginning. More little memories, notes and surprises can be placed here later.</p>
+      <p class="signature">— Shlok</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
