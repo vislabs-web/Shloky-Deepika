@@ -44,6 +44,6 @@ noBtn.addEventListener("click",()=>{
 
 yesBtn.addEventListener("click",()=>{
   questionSection.classList.add("answered");
-  answerMessage.textContent="I knew it. ♡";
+  answerMessage.textContent="Thank you soooooooooo much! I really love you!!! ♡";
   yesBtn.style.transform="scale(1.18)";
 });
