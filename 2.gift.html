@@ -9,74 +9,78 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
   <style>
-    *{box-sizing:border-box}
-    html,body{margin:0;min-height:100%;color:#30342f}
-    body{
-      font-family:"DM Sans",sans-serif;
-      background:linear-gradient(180deg,#d7e8d5 0%,#bfd5bd 100%);
-      padding:30px 18px 55px;overflow-x:hidden
-    }
-    .garden{min-height:calc(100vh - 85px);position:relative;display:flex;justify-content:center;align-items:flex-start;padding:35px 0}
-    .rose-wall{position:fixed;top:0;bottom:0;width:clamp(72px,11vw,150px);z-index:1;pointer-events:none;overflow:hidden}
-    .rose-wall.left{left:0}.rose-wall.right{right:0}
-    .rose{
-      position:absolute;font-size:clamp(30px,5vw,62px);
-      filter:drop-shadow(4px 5px 0 rgba(83,61,61,.12));
-      transform:rotate(var(--r));opacity:.96
-    }
-    .rose:nth-child(1){top:2%;left:8%;--r:-12deg}.rose:nth-child(2){top:13%;right:2%;--r:18deg}
-    .rose:nth-child(3){top:26%;left:-5%;--r:7deg}.rose:nth-child(4){top:39%;right:-7%;--r:-15deg}
-    .rose:nth-child(5){top:52%;left:4%;--r:17deg}.rose:nth-child(6){top:65%;right:3%;--r:-8deg}
-    .rose:nth-child(7){top:78%;left:-8%;--r:-17deg}.rose:nth-child(8){top:91%;right:-5%;--r:12deg}
-    .leaf{position:absolute;width:28px;height:14px;background:#78966f;border-radius:100% 0 100% 0;opacity:.75}
-    .letter{
-      width:min(720px,88vw);position:relative;z-index:5;
-      padding:72px clamp(30px,7vw,78px) 62px;
-      background:#fffdf6;
-      box-shadow:14px 20px 0 rgba(73,77,68,.14),0 24px 50px rgba(58,70,58,.18);
-      clip-path:polygon(1% 2%,98% 0,100% 97%,3% 100%,0 7%);
-      transform:rotate(-.6deg)
-    }
-    .letter:before{
-      content:"";position:absolute;inset:0;pointer-events:none;opacity:.3;
-      background-image:radial-gradient(rgba(65,58,45,.08) .6px,transparent .6px);
-      background-size:8px 8px
-    }
-    .tape{
-      position:absolute;width:115px;height:32px;top:17px;left:50%;
-      transform:translateX(-50%) rotate(-2deg);background:rgba(235,210,158,.76);
-      box-shadow:0 1px 0 rgba(80,70,50,.12)
-    }
-    .eyebrow{text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#7b8577;margin:0 0 20px}
-    h1{
-      text-align:center;font-family:"Tiro Devanagari Hindi","Playfair Display",serif;
-      font-size:clamp(38px,6vw,58px);font-weight:500;line-height:1.05;margin:0 0 38px;color:#3b4b3c
-    }
-    .letter-body{
-      font-family:"Tiro Devanagari Hindi","Playfair Display",serif;
-      font-size:clamp(19px,2.4vw,25px);line-height:2;color:#4d514b
-    }
-    .letter-body p{margin:0 0 24px}
-    .highlight{color:#7c4c50}
-    .closing{text-align:right;margin-top:36px!important;font-size:24px;color:#596451}
-    .signature{text-align:right;font-size:31px!important;color:#39493b;margin-top:0!important}
-    .heart{text-align:center;font-size:28px;margin:22px 0;color:#a65b65}
-    .back{
-      display:block;width:max-content;margin:38px auto 0;text-decoration:none;
-      color:#fff;background:#38483b;padding:13px 21px;border-radius:999px;
-      font:600 13px "DM Sans",sans-serif;box-shadow:0 5px 0 #9aa69a
-    }
-    .back:active{transform:translateY(2px);box-shadow:0 3px 0 #9aa69a}
-    @media(max-width:600px){
-      body{padding:15px 10px 35px}
-      .garden{padding:22px 0}
-      .rose-wall{width:58px}
-      .rose{font-size:31px}
-      .letter{width:calc(100vw - 88px);padding:62px 22px 42px}
-      .letter-body{font-size:18px;line-height:1.9}
-      .closing{font-size:21px!important}.signature{font-size:27px!important}
-    }
-  </style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;color:#3d3035}
+body{
+  font-family:"DM Sans",sans-serif;
+  min-height:100vh;padding:34px 0 55px;overflow-x:hidden;
+  background:#b65a70;
+}
+.garden{
+  min-height:calc(100vh - 89px);position:relative;display:flex;justify-content:center;
+  align-items:flex-start;padding:38px clamp(110px,15vw,220px);overflow:hidden;
+  background:
+    radial-gradient(ellipse at center,#e9c8cf 0%,#dbaab5 58%,#c77a8c 100%);
+}
+.rose-wall{
+  position:absolute;top:-35px;bottom:-35px;width:clamp(150px,18vw,270px);
+  z-index:1;pointer-events:none;overflow:hidden;
+  background:#a9435b;
+}
+.rose-wall.left{left:-18px;transform:rotate(-1deg)}
+.rose-wall.right{right:-18px;transform:rotate(1deg)}
+.rose-wall:before{
+  content:"";position:absolute;inset:-20px;
+  background:
+    radial-gradient(ellipse at 20% 15%,#d76e82 0 8%,transparent 8.5%),
+    radial-gradient(ellipse at 72% 7%,#96334e 0 10%,transparent 10.5%),
+    radial-gradient(ellipse at 45% 27%,#c6546d 0 12%,transparent 12.5%),
+    radial-gradient(ellipse at 86% 35%,#e0788a 0 9%,transparent 9.5%),
+    radial-gradient(ellipse at 18% 46%,#8f304a 0 11%,transparent 11.5%),
+    radial-gradient(ellipse at 61% 54%,#d66579 0 13%,transparent 13.5%),
+    radial-gradient(ellipse at 30% 68%,#a53b55 0 12%,transparent 12.5%),
+    radial-gradient(ellipse at 78% 76%,#dc7183 0 11%,transparent 11.5%),
+    radial-gradient(ellipse at 44% 91%,#923149 0 13%,transparent 13.5%),
+    radial-gradient(ellipse at 91% 94%,#c65168 0 12%,transparent 12.5%);
+  filter:blur(.2px);
+}
+.rose-wall:after{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 35% 20%,#56734e 0 3%,transparent 3.5%),
+    radial-gradient(ellipse at 68% 42%,#69865b 0 3%,transparent 3.5%),
+    radial-gradient(ellipse at 25% 61%,#4f704b 0 3.5%,transparent 4%),
+    radial-gradient(ellipse at 78% 80%,#5f7e52 0 3%,transparent 3.5%);
+  opacity:.9;
+}
+.rose{position:absolute;width:88px;height:88px;border-radius:50%;background:radial-gradient(circle,#7d2943 0 10%,#c94f69 11% 23%,#8e304a 24% 37%,#d6677d 38% 51%,#9f3852 52% 65%,#d96d80 66% 75%,transparent 76%);filter:drop-shadow(3px 6px 3px rgba(67,33,43,.22))}
+.rose:after{content:"";position:absolute;width:24px;height:92px;background:#55764d;left:42px;top:65px;transform:rotate(16deg);z-index:-1;border-radius:100%}
+.r1{left:5%;top:3%;transform:scale(.8)}.r2{right:5%;top:12%;transform:scale(1.05)}.r3{left:0;top:28%;transform:scale(.7)}.r4{right:-5%;top:38%;transform:scale(.82)}.r5{left:8%;top:52%;transform:scale(1.05)}.r6{right:7%;top:63%;transform:scale(.72)}.r7{left:-4%;top:78%;transform:scale(.85)}.r8{right:0;top:88%;transform:scale(.98)}
+.page{width:min(720px,100%);position:relative;z-index:5}
+.letter{
+  width:100%;position:relative;padding:72px clamp(28px,7vw,78px) 62px;
+  background:#fffdf7;box-shadow:14px 20px 0 rgba(73,54,62,.16),0 24px 50px rgba(58,40,48,.25);
+  clip-path:polygon(1% 2%,98% 0,100% 97%,3% 100%,0 7%);transform:rotate(-.6deg)
+}
+.letter:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.3;background-image:radial-gradient(rgba(65,58,45,.08) .6px,transparent .6px);background-size:8px 8px}
+.tape{position:absolute;width:115px;height:32px;top:17px;left:50%;transform:translateX(-50%) rotate(-2deg);background:rgba(235,210,158,.76)}
+.eyebrow{text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#8c6872;margin:0 0 20px}
+h1{text-align:center;font:600 clamp(46px,8vw,72px)/.9 "Cormorant Garamond",serif;margin:0 0 38px;color:#633846}
+.letter-body{font:19px/1.85 "Cormorant Garamond",serif;color:#49383d}.letter-body p{margin:0 0 22px}
+.highlight{color:#8e3f56}.closing{text-align:right;margin-top:36px!important;font-size:21px}.signature{text-align:right;font:34px "Parisienne",cursive!important;color:#8e3f56;margin-top:0!important}
+.heart{text-align:center;font-size:24px;margin:25px 0;color:#b34d68}
+.back{display:block;width:max-content;margin:38px auto 0;text-decoration:none;color:#fff;background:#633846;padding:13px 21px;border-radius:999px;font:600 13px "DM Sans",sans-serif;box-shadow:0 5px 0 #b899a2}
+.back:active{transform:translateY(2px);box-shadow:0 3px 0 #b899a2}
+@media(max-width:700px){
+  body{padding:15px 0 35px}
+  .garden{padding:25px 62px;min-height:calc(100vh - 50px)}
+  .rose-wall{width:88px}.rose{width:58px;height:58px}
+  .rose:after{width:16px;height:60px;left:28px;top:43px}
+  .letter{padding:60px 20px 42px}
+  .letter-body{font-size:18px;line-height:1.8}
+  .closing{font-size:19px!important}.signature{font-size:28px!important}
+}
+</style>
 </head>
 <body>
   <main class="garden">
