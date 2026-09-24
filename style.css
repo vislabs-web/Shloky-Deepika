@@ -620,3 +620,329 @@ button span{margin-left:7px}.foreground-paper{position:absolute;z-index:11;botto
   .modal-paper h2,.letter-pop-card h3{font-size:34px !important}
   .letter-pop-card p{font-size:17px !important;line-height:1.6 !important}
 }
+
+/* =========================================================
+   MOBILE REDESIGN v3 — not a shrunken desktop
+   ========================================================= */
+@media (max-width:650px){
+
+  :root{
+    --mobile-ink:#263243;
+    --mobile-paper:#fffdf8;
+    --mobile-blue:#dcecff;
+    --mobile-green:#c8ddc5;
+    --mobile-shadow:0 12px 28px rgba(48,61,73,.14);
+  }
+
+  html{scroll-behavior:smooth}
+  body{
+    width:100%;
+    margin:0;
+    background:#c8ddc5 !important;
+    overflow-x:hidden !important;
+  }
+
+  .scene{
+    width:100%;
+    padding:0 14px 44px !important;
+    background:
+      linear-gradient(#dcecff 0 485px,#c8ddc5 485px 100%) !important;
+    overflow:hidden !important;
+  }
+  .scene:after{display:none}
+
+  /* ---------- HERO ---------- */
+  .diorama{
+    width:100% !important;
+    height:485px !important;
+    min-height:485px !important;
+    margin:0 auto 42px !important;
+    transform:none !important;
+    filter:none !important;
+  }
+  .back-paper{
+    border-radius:0 0 22px 22px !important;
+    box-shadow:inset 0 -10px 0 rgba(92,121,153,.08) !important;
+  }
+  .paper-cloud{opacity:.8}
+  .cloud-one{top:10%;right:3%;transform:scale(.5)}
+  .cloud-two{top:20%;left:-4%;transform:scale(.38)}
+  .sun{width:52px;height:52px;top:9%;left:9%}
+
+  .mountain{
+    border-left-width:125px !important;
+    border-right-width:125px !important;
+    border-bottom-width:165px !important;
+    bottom:31% !important;
+  }
+  .mountain-left{left:-125px !important}
+  .mountain-right{right:-125px !important}
+
+  .ground{height:38% !important}
+  .tree-one{left:-12% !important;transform:scale(.48) !important}
+  .tree-two{right:-12% !important;transform:scale(.55) !important}
+  .tree-three{right:5% !important;bottom:25% !important;transform:scale(.32) !important}
+
+  .letter-card{
+    width:calc(100% - 42px) !important;
+    min-height:0 !important;
+    padding:45px 18px 30px !important;
+    top:50% !important;
+    border-radius:3px !important;
+    clip-path:none !important;
+    transform:translate(-50%,-50%) rotate(-1deg) !important;
+    box-shadow:8px 11px 0 rgba(67,79,92,.12),var(--mobile-shadow) !important;
+  }
+  .letter-card .tape{width:82px;height:25px;top:12px}
+  .letter-card .eyebrow{font-size:8px !important;letter-spacing:.16em !important;margin-bottom:14px !important}
+  .letter-card h1{font-size:43px !important;line-height:.9 !important}
+  .letter-card .line{width:55px;margin:18px auto 12px}
+  .letter-card .from{font-size:16px !important;margin-bottom:18px !important}
+  .letter-card button{font-size:10px !important;padding:10px 13px !important}
+  .foreground-paper{height:17px !important}
+
+  /* ---------- ALL PAPER SECTIONS ---------- */
+  .question-section,
+  .recreate-section,
+  .gifts-section,
+  .open-when-section,
+  .universe-section{
+    width:100% !important;
+    margin:0 auto 42px !important;
+  }
+
+  .question-paper,
+  .recreate-paper,
+  .gifts-paper,
+  .open-when-paper{
+    width:100% !important;
+    border-radius:6px !important;
+    clip-path:none !important;
+    box-shadow:8px 10px 0 rgba(67,79,92,.11),var(--mobile-shadow) !important;
+  }
+
+  /* ---------- QUESTION ---------- */
+  .question-paper{
+    padding:42px 18px 38px !important;
+    transform:rotate(.4deg);
+  }
+  .question-eyebrow,
+  .recreate-eyebrow,
+  .gifts-eyebrow,
+  .open-when-eyebrow{
+    font-size:8px !important;
+    letter-spacing:.19em !important;
+  }
+  .question-paper h2{font-size:42px !important;line-height:.95 !important}
+  .question-note{font-size:16px !important}
+  .answer-area{
+    min-height:108px !important;
+    flex-direction:column !important;
+    gap:10px !important;
+  }
+  .answer{width:130px !important;padding:12px 20px !important}
+
+  /* ---------- PHOTO ---------- */
+  .recreate-paper{
+    padding:42px 14px 34px !important;
+    transform:rotate(-.35deg);
+  }
+  .recreate-paper h2{
+    font-size:30px !important;
+    line-height:1.02 !important;
+    margin-bottom:20px !important;
+  }
+  .photo-frame{
+    width:100% !important;
+    padding:6px !important;
+    margin:16px auto 0 !important;
+    transform:none !important;
+    box-shadow:5px 7px 0 rgba(67,79,92,.13) !important;
+  }
+  .photo-frame img{
+    aspect-ratio:4/3 !important;
+    object-fit:cover !important;
+  }
+  .recreate-caption{
+    font-size:16px !important;
+    line-height:1.25 !important;
+  }
+
+  /* ---------- GIFTS ---------- */
+  .gifts-paper{
+    padding:42px 14px 36px !important;
+    transform:rotate(.3deg);
+  }
+  .gifts-paper h2{font-size:42px !important}
+  .gifts-subtitle{
+    max-width:280px !important;
+    font-size:16px !important;
+    line-height:1.3 !important;
+  }
+  .gift-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+    max-width:none !important;
+  }
+  .gift-card,
+  .gift-card:nth-child(2){
+    width:100% !important;
+    min-height:145px !important;
+    transform:none !important;
+    padding:20px !important;
+    border-radius:4px !important;
+    box-shadow:5px 7px 0 rgba(67,79,92,.12) !important;
+  }
+  .gift-card:nth-child(2){background:#eaf1f8 !important}
+  .gift-icon{font-size:36px !important;margin-bottom:6px !important}
+  .gift-card strong{font-size:25px !important}
+  .gift-card small{font-size:10px !important}
+
+  /* ---------- OPEN WHEN: SIMPLE PAPER WALL ---------- */
+  .open-when-paper{
+    padding:42px 13px 36px !important;
+    transform:none !important;
+    background:#f7f0e3 !important;
+  }
+  .open-when-paper h2{
+    font-size:45px !important;
+    line-height:.92 !important;
+    margin-bottom:10px !important;
+  }
+  .open-when-subtitle{
+    max-width:290px !important;
+    font-size:16px !important;
+    line-height:1.3 !important;
+    margin:0 auto 26px !important;
+  }
+  .envelope-wall{
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    max-width:330px !important;
+    gap:14px !important;
+  }
+  .envelope,
+  .envelope:nth-child(2),
+  .envelope:nth-child(3),
+  .envelope:nth-child(4),
+  .envelope-center{
+    width:100% !important;
+    min-height:128px !important;
+    height:128px !important;
+    flex:none !important;
+    padding:17px !important;
+    border-radius:2px !important;
+    transform:none !important;
+    box-shadow:5px 7px 0 rgba(67,79,92,.13) !important;
+  }
+  .envelope:nth-child(even){transform:rotate(.35deg) !important}
+  .envelope:nth-child(odd){transform:rotate(-.35deg) !important}
+  .envelope-flap{height:66px !important}
+  .envelope-label{
+    font-size:19px !important;
+    max-width:245px !important;
+  }
+
+  /* ---------- LITTLE UNIVERSE: CLEAN POSTER ---------- */
+  .universe-section{margin-bottom:42px !important}
+  .universe-sky{
+    width:100% !important;
+    height:570px !important;
+    border-radius:8px !important;
+    clip-path:none !important;
+    box-shadow:10px 13px 0 rgba(20,32,48,.18),0 20px 35px rgba(31,48,71,.20) !important;
+  }
+  .universe-sky:after{
+    background-size:48px 48px !important;
+    opacity:.18 !important;
+  }
+  .universe-title{
+    top:40px !important;
+    width:84% !important;
+  }
+  .universe-title p{
+    font-size:8px !important;
+    letter-spacing:.18em !important;
+    margin-bottom:12px !important;
+  }
+  .universe-title h2{
+    font-size:31px !important;
+    line-height:1.04 !important;
+    max-width:285px !important;
+  }
+  .moon-paper{
+    width:55px !important;
+    height:55px !important;
+    top:28px !important;
+    right:7% !important;
+  }
+  .moon-paper:after{
+    width:47px !important;
+    height:55px !important;
+    left:-13px !important;
+  }
+  .star{width:3px !important;height:3px !important;box-shadow:0 0 7px rgba(247,231,180,.55) !important}
+  .s1{left:9% !important;top:24% !important}
+  .s2{left:17% !important;top:40% !important}
+  .s3{left:31% !important;top:31% !important}
+  .s4{left:49% !important;top:43% !important}
+  .s5{right:26% !important;top:31% !important}
+  .s6{right:10% !important;top:45% !important}
+  .s7{left:12% !important;top:65% !important}
+  .s8{right:9% !important;top:68% !important}
+  .constellation-line{
+    opacity:.3 !important;
+    height:1px !important;
+  }
+  .line-a{left:17% !important;top:40% !important;width:62px !important}
+  .line-b{left:31% !important;top:31% !important;width:67px !important}
+  .line-c{left:49% !important;top:43% !important;width:62px !important}
+  .paper-person{
+    width:48px !important;
+    height:112px !important;
+    bottom:90px !important;
+  }
+  .paper-person:after{inset:8px !important}
+  .paper-person span{
+    width:25px !important;
+    height:25px !important;
+    top:-16px !important;
+    left:11.5px !important;
+  }
+  .paper-person.boy{left:27% !important;transform:rotate(-3deg) !important}
+  .paper-person.girl{right:27% !important;transform:rotate(3deg) !important}
+  .heart-constellation{
+    bottom:182px !important;
+    font-size:38px !important;
+  }
+  .universe-note{
+    bottom:27px !important;
+    width:80% !important;
+    white-space:normal !important;
+    text-align:center !important;
+    font-size:16px !important;
+  }
+
+  /* ---------- FOOT / POPUPS ---------- */
+  .hint{
+    width:88% !important;
+    margin:0 auto !important;
+    font-size:8px !important;
+    line-height:1.4 !important;
+  }
+  .modal,.letter-pop{
+    padding:14px !important;
+  }
+  .modal-paper,.letter-pop-card{
+    width:100% !important;
+    max-width:350px !important;
+    padding:43px 20px 32px !important;
+    border-radius:4px !important;
+  }
+  .modal-paper h2,.letter-pop-card h3{
+    font-size:32px !important;
+    line-height:1 !important;
+  }
+}
