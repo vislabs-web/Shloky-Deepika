@@ -18,48 +18,11 @@ body{
 }
 .garden{
   min-height:calc(100vh - 89px);position:relative;display:flex;justify-content:center;
-  align-items:flex-start;padding:38px clamp(155px,19vw,285px);overflow:hidden;
-  background:
-    radial-gradient(ellipse at center,#e9c8cf 0%,#dbaab5 58%,#c77a8c 100%);
+  align-items:flex-start;padding:38px 20px;overflow:hidden;
+  background:linear-gradient(180deg,#dcead7 0%,#c9ddc5 100%);
 }
-.rose-wall{
-  position:absolute;top:-35px;bottom:-35px;width:clamp(155px,19vw,285px);
-  z-index:1;pointer-events:none;overflow:hidden;
-  background:transparent;
-}
-.rose-wall.left{left:-18px;transform:rotate(-1deg)}
-.rose-wall.right{right:-18px;transform:rotate(1deg)}
-.rose-wall:before{
-  content:"";position:absolute;inset:-20px;
-  background:
-    radial-gradient(ellipse at 20% 15%,#d76e82 0 8%,transparent 8.5%),
-    radial-gradient(ellipse at 72% 7%,#96334e 0 10%,transparent 10.5%),
-    radial-gradient(ellipse at 45% 27%,#c6546d 0 12%,transparent 12.5%),
-    radial-gradient(ellipse at 86% 35%,#e0788a 0 9%,transparent 9.5%),
-    radial-gradient(ellipse at 18% 46%,#8f304a 0 11%,transparent 11.5%),
-    radial-gradient(ellipse at 61% 54%,#d66579 0 13%,transparent 13.5%),
-    radial-gradient(ellipse at 30% 68%,#a53b55 0 12%,transparent 12.5%),
-    radial-gradient(ellipse at 78% 76%,#dc7183 0 11%,transparent 11.5%),
-    radial-gradient(ellipse at 44% 91%,#923149 0 13%,transparent 13.5%),
-    radial-gradient(ellipse at 91% 94%,#c65168 0 12%,transparent 12.5%);
-  filter:blur(.2px);
-}
-.rose-wall:after{
-  content:"";position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse at 35% 20%,#56734e 0 3%,transparent 3.5%),
-    radial-gradient(ellipse at 68% 42%,#69865b 0 3%,transparent 3.5%),
-    radial-gradient(ellipse at 25% 61%,#4f704b 0 3.5%,transparent 4%),
-    radial-gradient(ellipse at 78% 80%,#5f7e52 0 3%,transparent 3.5%);
-  opacity:.9;
-}
-.rose{position:absolute;width:88px;height:88px;border-radius:50%;background:radial-gradient(circle,#7d2943 0 10%,#c94f69 11% 23%,#8e304a 24% 37%,#d6677d 38% 51%,#9f3852 52% 65%,#d96d80 66% 75%,transparent 76%);filter:drop-shadow(3px 6px 3px rgba(67,33,43,.22))}
-
-.rose{background:radial-gradient(circle at 50% 50%,#5f1730 0 8%,transparent 9%),repeating-conic-gradient(#e94763 0 12deg,#9d1f3c 13deg 22deg,#f06479 23deg 34deg);box-shadow:inset 0 0 9px rgba(75,10,25,.55),0 8px 10px rgba(47,35,28,.2)}
-.rose:before{content:"";position:absolute;inset:13%;border-radius:50%;background:repeating-conic-gradient(#f16a7e 0 13deg,#a82240 14deg 25deg);box-shadow:inset 0 0 8px rgba(80,10,25,.5)}
-.r9{left:-8%;top:76%;transform:scale(.95)}.r10{right:-8%;top:84%;transform:scale(.82)}.r11{left:24%;top:12%;transform:scale(.48)}.r12{right:24%;top:35%;transform:scale(.5)}.r13{left:18%;top:50%;transform:scale(.55)}.r14{right:17%;top:73%;transform:scale(.5)}
 .rose:after{content:"";position:absolute;width:24px;height:92px;background:#55764d;left:42px;top:65px;transform:rotate(16deg);z-index:-1;border-radius:100%}
-.r1{left:5%;top:3%;transform:scale(.8)}.r2{right:5%;top:12%;transform:scale(1.05)}.r3{left:0;top:28%;transform:scale(.7)}.r4{right:-5%;top:38%;transform:scale(.82)}.r5{left:8%;top:52%;transform:scale(1.05)}.r6{right:7%;top:63%;transform:scale(.72)}.r7{left:-4%;top:78%;transform:scale(.85)}.r8{right:0;top:88%;transform:scale(.98)}
+
 .page{width:min(720px,100%);position:relative;z-index:5}
 .letter{
   width:100%;position:relative;padding:72px clamp(28px,7vw,78px) 62px;
@@ -78,9 +41,7 @@ h1{text-align:center;font:600 clamp(46px,8vw,72px)/.9 "Cormorant Garamond",serif
 @media(max-width:700px){
   body{padding:15px 0 35px}
   .garden{padding:25px 62px;min-height:calc(100vh - 50px)}
-  .rose-wall{width:88px}.rose{width:58px;height:58px}
-  .rose:after{width:16px;height:60px;left:28px;top:43px}
-  .letter{padding:60px 20px 42px}
+  .rose-wall{width:88px}  .letter{padding:60px 20px 42px}
   .letter-body{font-size:18px;line-height:1.8}
   .closing{font-size:19px!important}.signature{font-size:28px!important}
 }
@@ -88,15 +49,6 @@ h1{text-align:center;font:600 clamp(46px,8vw,72px)/.9 "Cormorant Garamond",serif
 </head>
 <body>
   <main class="garden">
-    <div class="rose-wall left" aria-hidden="true">
-      <span class="rose"></span><span class="rose"></span><span class="rose"></span><span class="rose"></span>
-      <span class="rose"></span><span class="rose"></span><span class="rose"></span><span class="rose"></span>
-    </div>
-    <div class="rose-wall right" aria-hidden="true">
-      <span class="rose"></span><span class="rose"></span><span class="rose"></span><span class="rose"></span>
-      <span class="rose"></span><span class="rose"></span><span class="rose"></span><span class="rose"></span>
-    </div>
-
     <article class="letter">
       <div class="tape"></div>
       <p class="eyebrow">Gift 02 · A little letter from Shlok</p>
